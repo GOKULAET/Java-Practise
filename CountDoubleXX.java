@@ -14,3 +14,15 @@ public int countXX(String str)
 	return count;
 	
 }
+
+//another method
+public int countXX(String str)
+{
+ int l=0,i=-1;
+			i=str.indexOf("xx",i+1);
+
+			while(i!=-1)
+			{i=str.indexOf("xx",i+1);
+			l++;} 
+return l;
+}
