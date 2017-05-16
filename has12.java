@@ -1,19 +1,31 @@
 public boolean has12(int[] nums) {
 boolean flag=false;
-boolean flag1=false;
-for(int a: nums){
-
-if(a==1 && flag==false)
+for(int i=0;i<=nums.length-1;i++){
+int a=nums[i];
+if(a==1 && !flag)
 flag=true;
-flag1=true;
-if(flag==true && a==2)
-flag=true;
-
-
-if(a!=1 | a!=2 && flag==false) 
+if(flag && a==2)
+return flag;
+if(flag && i==(nums.length-1)) 
 flag=false;
-if(a!=1 | a!=2 && flag==true && flag1==false) 
-flag=flag1;
 }
 return flag;
 }
+
+
+
+
+//Another Method
+
+public boolean has12(int[] nums){
+int c1=0,c2=0;
+for(int x:nums)
+{if(x==1)
+c1++;
+if(x==2)
+c2++;}
+if(c1>0&&c2>0)
+return true;
+else return false;
+}
+
