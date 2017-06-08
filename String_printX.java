@@ -23,14 +23,10 @@ public class Test2 {
 public static void printX(String s){
         for(int i=0;i<s.length();i++){
             for(int j=0;j<s.length();j++){
-                if(j==i)
-                    System.out.print(s.charAt(j)+"");
-                else if(s.substring(j).length()==i+1 && !(j==i))
+                if(j==i || (s.substring(j).length()==i+1))
                     System.out.print(s.charAt(j)+"");
                 else
-                    //System.out.print(s.charAt(j));
-                    System.out.print(" ");
-                
+                    System.out.print(" ");  
             }
             System.out.println(" ");
         }
