@@ -24,7 +24,7 @@ public class TestRoman {
                              "C","CC","CCC","CD","D","DC","DCC","DCCC","CM","M",
                              "M","MM","MMM","MMMM"};
         String result="";
-        if(input<10){
+        if(input<=10){
             return roman1[input];
         }
         if(input>10 &&input<=100) {
